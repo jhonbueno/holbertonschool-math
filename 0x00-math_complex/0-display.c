@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include "holberton.h"
 
 /**
  * display_complex_number- singly linked list
@@ -12,10 +12,14 @@
 
 void display_complex_number(complex c)
 {
-	if (c->im != 0 && c->re != 0)
-		printf("%f + %fi", c->re, c->im);
-	else if (c->im == 0)
-		printf("%f", c->re);
-	else if (c->re == 0)
-		printf("%f", c->im);
+	complex *com;
+
+	com = &c;
+
+	if (com->im != 0 && com->re != 0)
+		printf("%.0f + %.0fi\n", com->re, com->im);
+	else if (com->im == 0)
+		printf("%.0f\n", com->re);
+	else if (com->re == 0)
+		printf("%.0f\n", com->im);
 }
