@@ -31,6 +31,8 @@ void display_complex_number(complex c)
 
 		if (com->im == 1 || com->im == -1)
 			printf("%.0f %c i\n", com->re, signo);
+		else if (com->im > 0 && com->im <1)
+			printf("%.1f %c %.1fi\n", com->re, signo, imnumber);
 		else
 			printf("%.0f %c %.0fi\n", com->re, signo, imnumber);
 	}
