@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "holberton.h"
-
+#include <math.h>
 /**
- * addition - modulus complex number
+ * argument - modulus complex number
  * @c: complex type
  *
  *
@@ -10,13 +10,13 @@
  * Return: double
  */
 
-void addition(complex c1, complex c2, complex *c3)
+double argument(complex c)
 {
-	complex *com1, *com2;
+	complex *com;
+	double arg;
 
-	com1 = &c1;
-	com2 = &c2;
-	c3->re = com1->re + com2->re;
-	c3->im = com1->im + com2->im;
+	com = &c1;
+	arg = atan(com->im / com->re);
 
+	return (arg);
 }
