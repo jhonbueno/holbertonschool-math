@@ -29,7 +29,7 @@ void display_complex_number(complex c)
 		else
 			signo = '+';
 
-		if (com->im == 1)
+		if (com->im == 1 || com->im == -1)
 			printf("%.0f %c i\n", com->re, signo);
 		else
 			printf("%.0f %c %.0fi\n", com->re, signo, imnumber);
@@ -38,7 +38,7 @@ void display_complex_number(complex c)
 		printf("%.0f\n", com->re);
 	else if (com->re == 0)
 	{
-		if (com->im == 1)
+		if (com->im == 1 || com->im == -1)
 			printf("i\n");
 		else
 			printf("%.0f\n", com->im);
