@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "holberton.h"
 #include <math.h>
+
 /**
  * argument - modulus complex number
  * @c: complex type
