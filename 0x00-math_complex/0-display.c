@@ -14,20 +14,31 @@ void display_complex_number(complex c)
 {
 	complex *com;
 	char signo;
+	double imnumber;
 
 	com = &c;
+	imnumber = com->im;
 
 	if (com->im != 0 && com->re != 0)
 	{
 		if (com->im < 0)
+		{
 			signo = '-';
+			imnumber = -imnumber;
+		}
 		else
 			signo = '+';
 
-		printf("%.0f %c %.0fi\n", com->re, signo, com->im);
+		printf("%.0f %c %.0fi\n", com->re, signo, imnumber);
+		if (com->im == 1)
+			printf("%.0f %c i\n", com->re, signo);
 	}
 	else if (com->im == 0)
 		printf("%.0f\n", com->re);
 	else if (com->re == 0)
+	{
 		printf("%.0f\n", com->im);
+		if (com->im == 1)
+			printf("i\n");
+	}
 }
