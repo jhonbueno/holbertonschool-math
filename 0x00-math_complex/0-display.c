@@ -38,8 +38,9 @@ void display_complex_number(complex c)
 		printf("%.0f\n", com->re);
 	else if (com->re == 0)
 	{
-		printf("%.0f\n", com->im);
 		if (com->im == 1)
 			printf("i\n");
+		else
+			printf("%.0f\n", com->im);
 	}
 }
