@@ -15,7 +15,7 @@ double argument(complex c)
 	complex *com;
 	double arg;
 
-	com = &c1;
+	com = &c;
 	arg = atan(com->im / com->re);
 
 	return (arg);
