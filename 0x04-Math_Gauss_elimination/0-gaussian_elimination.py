@@ -7,6 +7,7 @@ def gaussian_elimination(A, b):
     b = np.array(b)
 
     if np.linalg.det(a) != 0:
-        return x = np.linalg.solve(a, b)
+        return np.linalg.solve(a, b)
     else:
-        return "You can't divide by zero!"
+        print("You can't divide by zero!")
+        return None
